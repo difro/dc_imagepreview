@@ -31,14 +31,17 @@ dc_previewimage = {
     },
 
     process_page : function(html, elem) {
-        var imagesRegex = new RegExp("<img[^>]+ src=([^>\\s]+)", "gi");
+        var imagesRegex = new RegExp("<img[^>]+src=([^>\\s]+)", "gi");
         var imageLink;
         while (1) {
             imageLink = imagesRegex.exec(html);
             if (imageLink == null) {
                 break;
             }
-            if (imageLink[1].match("wstatic.dcinside.com/gallery/skin")) {
+            if (imageLink[1].match("wstatic.dcinside.com")) {
+                continue;
+            }
+            if (imageLink[1].match("dclogo.jpg")) {
                 continue;
             }
             if (imageLink[1].match("but_fav_gall")) {
@@ -47,7 +50,7 @@ dc_previewimage = {
             if (imageLink[1].match("images/fav_selector.gif")) {
                 continue;
             }
-            if (imageLink[1].match("static/skin/dc_skin/")) {
+            if (imageLink[1].match("static/skin")) {
                 continue;
             }
             if (imageLink[1].match(".dcinside.com/zb40/zzbang/")) {
