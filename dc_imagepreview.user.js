@@ -1,10 +1,9 @@
 // ==UserScript==
 // @name                DC ImagePreview
-// @namespace            http://jihoonc.pe.kr
-// @description            Show image thumbnails on DCinside gallery list pages.
-// @include        http://*dcinside.com/*
+// @namespace           http://jihoonc.pe.kr
+// @description         Show image thumbnails on DCinside gallery list pages.
+// @include             http://*dcinside.com/*
 // ==/UserScript==
-
 
 dc_previewimage = {
     init : function() {
@@ -42,13 +41,12 @@ dc_previewimage = {
             if (imageLink[1].match("wstatic.dcinside.com/gallery/skin")) {
                 continue;
             }
-        if (imageLink[1].match("but_fav_gall")) {
-        continue;
-        }
-        if (imageLink[1].match("images/fav_selector.gif")) {
-            continue;
-        }
-
+            if (imageLink[1].match("but_fav_gall")) {
+                continue;
+            }
+            if (imageLink[1].match("images/fav_selector.gif")) {
+                continue;
+            }
             if (imageLink[1].match("static/skin/dc_skin/")) {
                 continue;
             }
@@ -59,7 +57,6 @@ dc_previewimage = {
             elem.innerHTML += "&nbsp;<img src=" + imageLink[1] + " height='40px' border='0px'/>&nbsp;";
         }
     }
-
 };
 
 dc_previewimage.init();
