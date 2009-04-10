@@ -44,6 +44,9 @@ dc_previewimage = {
             if (imageLink[1].match("dclogo.jpg")) {
                 continue;
             }
+            if (imageLink[1].match("bt_scrap.gif")) {
+                continue;
+            }
             if (imageLink[1].match("but_fav_gall")) {
                 continue;
             }
