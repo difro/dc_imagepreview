@@ -56,7 +56,7 @@ dc_previewimage = {
             if (imageLink[1].match("static/skin")) {
                 continue;
             }
-            if (imageLink[1].match(".dcinside.com/zb40/zzbang/")) {
+            if (imageLink[1].match("zzbang.dcinside.com")) {
                 // default zzalbang
                 continue;
             }
