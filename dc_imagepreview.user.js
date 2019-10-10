@@ -60,7 +60,7 @@ dc_previewimage = {
                 // default zzalbang
                 continue;
             }
-            elem.innerHTML += "&nbsp;<img src=" + imageLink[1] + " height='40px' border='0px'/>&nbsp;";
+            elem.innerHTML += "&nbsp;<img src=" + imageLink[1] + " style='height:40px; border:0px'/>&nbsp;";
         }
     }
 };
